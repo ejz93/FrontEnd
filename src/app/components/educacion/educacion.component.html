@@ -1,0 +1,26 @@
+<div class="row">
+  <h1>Educacion</h1>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+      +
+    </button>
+  </div>
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of edu">
+          <td><img src="{{Educacion.imgEdu}}" width="100px"></td>
+          <td>
+            <h2>{{Educacion.nombreEdu}}</h2>
+          </td>
+          <td>{{Educacion.descEdu}}</td>
+          <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editedu/{{Educacion.id}}">
+              <i class="bi bi-pencil-fill"></i></button></td>
+          <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Educacion.id)">
+              <i class="bi bi-trash-fill"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
