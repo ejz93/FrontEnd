@@ -9,7 +9,7 @@ import { Educacion } from "../models/educacion";
 })
 export class EducacionService {
     
-    eduURL = 'https://ejzback.herokuapp.com/';
+    eduURL = 'https://ejzback.herokuapp.com';
 
     constructor(private httpClient:HttpClient) { }
 

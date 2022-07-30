@@ -8,7 +8,7 @@ import { Skills } from "../models/skills";
     providedIn: "root"
 })
 export class SkillsService {
-    skiURL = 'https://ejzback.herokuapp.com/';
+    skiURL = 'https://ejzback.herokuapp.com';
 
     constructor(private httpClient: HttpClient) { }
 

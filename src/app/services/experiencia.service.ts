@@ -8,27 +8,27 @@ import { Experiencia } from "../models/experiencia";
     providedIn: "root"
 })
 export class ExperienciaService {
-    expURL = 'https://ejzback.herokuapp.com/';
+    private apiServerUrl = 'https://ejzback.herokuapp.com';
 
     constructor(private httpClient: HttpClient) { }
 
     public lista(): Observable<Experiencia[]>{
-        return this.httpClient.get<Experiencia[]>(this.expURL + 'lista');
+        return this.httpClient.get<Experiencia[]>(this.apiServerUrl + 'lista');
     }
 
     public detail(id: number): Observable<Experiencia>{
-        return this.httpClient.get<Experiencia>(this.expURL + `detail/${id}`);
+        return this.httpClient.get<Experiencia>(this.apiServerUrl + `detail/${id}`);
     }
 
     public save(experiencia: Experiencia): Observable<any>{
-        return this.httpClient.post<any>(this.expURL + 'create', experiencia);
+        return this.httpClient.post<any>(this.apiServerUrl + 'create', experiencia);
     }
 
     public update(id: number, experiencia: Experiencia): Observable<any>{
-        return this.httpClient.put<any>(this.expURL + `update/${id}`, experiencia);
+        return this.httpClient.put<any>(this.apiServerUrl + `update/${id}`, experiencia);
     }
 
     public delete(id: number): Observable<any>{
-        return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
+        return this.httpClient.delete<any>(this.apiServerUrl + `delete/${id}`);
     }
 }

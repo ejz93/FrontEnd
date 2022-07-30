@@ -8,7 +8,7 @@ import { Persona } from '../models/persona';
 })
 
 export class PersonaService {
-  URL = 'https://ejzback.herokuapp.com/';
+  URL = 'https://ejzback.herokuapp.com';
 
   constructor(private http: HttpClient) { }
 

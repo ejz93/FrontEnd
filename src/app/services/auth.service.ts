@@ -9,7 +9,7 @@ import { NewUser } from '../models/new-user';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://ejzback.herokuapp.com/'
+  authURL = 'https://ejzback.herokuapp.com'
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(newUser: NewUser): Observable<any>{
