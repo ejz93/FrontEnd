@@ -8,11 +8,11 @@ import { Persona } from '../models/persona';
 })
 
 export class PersonaService {
-  URL = 'https://ejzback.herokuapp.com';
+  private apiServerUrl = 'https://ejzback.herokuapp.com/';
 
   constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<Persona>{
-    return this.http.get<Persona>(this.URL + 'traer/perfil');
+    return this.http.get<Persona>(this.apiServerUrl + 'traer/perfil');
   }
 }
