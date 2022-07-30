@@ -9,6 +9,7 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./hys.component.css']
 })
 export class HysComponent implements OnInit {
+  private apiServerUrl='https://ejzback.herokuapp.com/';
   ski: Skills[] = []; 
   
   constructor(private skillsService:SkillsService, private tokenService: TokenService) { }
