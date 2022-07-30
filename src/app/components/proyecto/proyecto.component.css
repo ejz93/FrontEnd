@@ -1,9 +1,13 @@
 .row{
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0);
 }
 .contenedor{
     width: auto;
+}
+
+.titulopro{
+    padding: 20px;
+    margin: 20px;
 }
 
 .parte1, .parte2{
@@ -12,6 +16,8 @@
 }
 
 .img-proyecto{
+    height: 200px;
+    width: 400px;
     box-shadow: 3px 3px 3px black;
     background-color: rgba(0, 0, 0, 0.300);
 }

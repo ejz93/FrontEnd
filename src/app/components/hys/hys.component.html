@@ -1,23 +1,25 @@
-<div class="row">
-  <h1>Habilidades</h1>
-  <div>
-    <button type="button" class="btn btn-dark" routerLink="/nuevaski" *ngIf="isLogged">
-      +
-    </button>
-  </div>
-
-  <div class="col-lg-2" *ngFor="let Skills of ski">
-    <img src="{{Skills.imgSkill}}" width="50px" id="imgsk">
-
-    <div *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editski/{{Skills.id}}" id="btnsk">
-        <i class="bi bi-pencil-fill"></i></button></div>
-    <div *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Skills.id)" id="btnsk">
-        <i class="bi bi-trash-fill"></i></button></div>
-
-    <div class="progress">
-      <div class="progress-bar" style="width:{{Skills.porcentaje}}%" role="progressbar">
-        <h5>{{Skills.porcentaje}}%</h5>
-      </div>
+<div class="container">
+  <div class="row">
+    <h1 class="titulosk text-center text-decoration-underline">Habilidades</h1>
+    <div class="col-lg-12">
+      <button type="button" class="btn btn-dark" routerLink="/nuevaski" *ngIf="isLogged">
+        +
+      </button>
     </div>
 
+    <div class="col-lg-2" *ngFor="let Skills of ski">
+      <img src="{{Skills.imgSkill}}" width="50px" id="imgsk">
+
+      <div *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editski/{{Skills.id}}" id="btnsk">
+          <i class="bi bi-pencil-fill"></i></button></div>
+      <div *ngIf="isLogged"><button class="btn btn-warning" (click)="delete(Skills.id)" id="btnsk">
+          <i class="bi bi-trash-fill"></i></button></div>
+
+      <div class="progress">
+        <div class="progress-bar" style="width:{{Skills.porcentaje}}%" role="progressbar">
+          <h5>{{Skills.porcentaje}}%</h5>
+        </div>
+      </div>
+
+    </div>
   </div>

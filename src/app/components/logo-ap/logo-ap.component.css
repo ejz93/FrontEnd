@@ -1,9 +1,9 @@
 .container {
-    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 .redes {
     margin-right: 0.5em;
@@ -19,6 +19,8 @@ img {
 }
 
 .btn {
+    font-weight: 500;
+    color: white;
     border-width: thin;
 }
 
